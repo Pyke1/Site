@@ -1,6 +1,6 @@
 <?php
    class RecetteManager extends Model{
-	   
+
     function getRecette(){
        $sql='SELECT *
       FROM Recette';
@@ -8,10 +8,10 @@
       $results = $req->fetch(PDO::FETCH_ASSOC);
       return $results;
     }
-	
-	
-	
-	function getRecetteDétail($ID){
+
+
+
+	function getRecetteDetail($ID){
        $sql='SELECT *
       FROM RecetteDetails where ID='.$ID;
       $req = $this->executeRequest($sql);
